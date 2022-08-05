@@ -22,14 +22,15 @@ This is a small library for motor control using the L298N module. It makes it ea
   
   <tr>
     <td>Enable Pin</td>
-    <td>in1</td>
-    <td>in2</td>
+    <td>in1/in3</td>
+    <td>in2/in4</td>
   <tr>
 </table>
 
 ```c++
 #include <Arduino.h>
 #include <l298n.h>
+
 L298N rightMotor(19,14,5);
 L298N leftMotor(12,13,16);
 
@@ -39,18 +40,22 @@ L298N leftMotor(12,13,16);
 ```c++
 #include <Arduino.h>
 #include <l298n.h>
-// Example 
 
+// Create Object
 L298N rightMotor(19,14,5);
 L298N leftMotor(12,13,16);
 
 void setup() {
-  // Setup is not required. Pinmode is already set
+  // Setup is not required. 
+ //Pinmode is already set
 }
 
 void loop() {
     rightMotor.forward();
-    leftMotor.forward();
+    leftMotor.backward();
+    delay(500);
+    rightMotor.off();
+    leftMotor.off();
 }
 ```
 
