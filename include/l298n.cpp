@@ -13,7 +13,7 @@ L298N::L298N(int a, int b,int c){
 };
 
 float L298N::setSpeed(float n){
-    if(n != NULL){
+    if(n == NULL){
         this->motorSpeed = 255;       
     }else{
         this->motorSpeed = map(n,0,100,0,255);
