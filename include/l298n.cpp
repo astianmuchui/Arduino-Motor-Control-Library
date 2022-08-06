@@ -27,7 +27,7 @@ float L298N::readSpeed(){
 }
 
 bool L298N::isOn(){
-    if(digitalRead(this->enablePin) == HIGH || analogRead(this->enablePin > 0)){
+    if((digitalRead(this->enablePin) == HIGH) || (analogRead(this->enablePin) > 0)){
         return true;
     }else{
         return false;
