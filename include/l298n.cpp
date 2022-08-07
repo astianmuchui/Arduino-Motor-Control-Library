@@ -8,7 +8,7 @@ L298N::L298N(int a, int b,int c){
     for(int pin = 0; pin<3; pin++){
         pinMode(enable_pins[pin],OUTPUT);
     }    
-    // This function needs restructuring..
+    // This function needs to be re-done
     setSpeed(NULL);
 };
 
