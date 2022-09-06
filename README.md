@@ -25,13 +25,13 @@ This is a small library for motor control using the L298N module. It makes it ea
     <td>in2/in4 (PWM)</td>
   <tr>
 </table>
+
 ```c++
 #include <Arduino.h>
 #include <l298n.h>
 // The params have been discussed above
 L298N rightMotor(19,14,5);
 L298N leftMotor(12,13,16);
-
 ```
 - Call methods 
 
