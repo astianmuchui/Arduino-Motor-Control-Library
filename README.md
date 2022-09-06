@@ -4,7 +4,7 @@
 This is a small library for motor control using the L298N module. It makes it easier to control motors independently.
 
 # Usage 
-- Include the library source file. 
+- Include the source file. 
 
 ```c++ 
 #include <Arduino.h>
@@ -25,7 +25,6 @@ This is a small library for motor control using the L298N module. It makes it ea
     <td>in2/in4 (PWM)</td>
   <tr>
 </table>
-
 ```c++
 #include <Arduino.h>
 #include <l298n.h>
