@@ -26,8 +26,8 @@ L298N MyMotor(int enablePin,int input1,int input2,int speed);
 #include <Arduino.h>
 #include <l298n.h>
 // The params have been discussed above
-L298N rightMotor(19,14,5);
-L298N leftMotor(12,13,16);
+L298N rightMotor(19,14,5,50);
+L298N leftMotor(12,13,16,50);
 ```
 - Call methods 
 
