@@ -23,12 +23,17 @@ This is a small library for motor control using the L298N module. It makes it ea
   <tr>
     <td>Enable Pin A/B (PWM)</td>
     <td>in1/in3 (PWM)</td>
-    <td>in2/in4 (PWM)</td>
+
   <tr>
     <tr>
     <td>Enable Pin A/B (PWM)</td>
     <td>in1/in3 (PWM)</td>
-    <td>in2/in4 (PWM)</td>
+
+  <tr>
+  <tr>
+    <td>Motor Speed</td>
+    <td>Motor Speed</td>
+
   <tr>
 </table>
 
@@ -40,6 +45,7 @@ L298N rightMotor(19,14,5);
 L298N leftMotor(12,13,16);
 ```
 - Call methods 
+- The motor speed is a value between 0-100
 
 ```c++
 #include <Arduino.h>
