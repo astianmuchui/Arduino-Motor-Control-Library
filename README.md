@@ -13,24 +13,11 @@ This is a small library for motor control using the L298N module. It makes it ea
 ```
 - Create the L298N Object for each motor 
 ### Arguments for initialization
-<table>
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
 
-  <tr>
-  <tr>
-    <td>Enable Pin A/B (PWM)</td>
-    <td>in1/in3 (PWM)</td>
-    <td>Motor Speed</td>
-  <tr>
-    <tr>
-    <td>Enable Pin A/B (PWM)</td>
-    <td>in1/in3 (PWM)</td>
-    <td>Motor Speed</td>
-  <tr>
-</table>
+```c++
+// Instantiate object
+L298N MyMotor(enablePin,input1,input2,speed);
+```
 
 ```c++
 #include <Arduino.h>
