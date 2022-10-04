@@ -18,7 +18,7 @@ This is a small library for motor control using the L298N module. It makes it ea
     <td>1</td>
     <td>2</td>
     <td>3</td>
-    <td>4</td>
+
   <tr>
   <tr>
     <td>Enable Pin A/B (PWM)</td>
