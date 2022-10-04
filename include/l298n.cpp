@@ -1,24 +1,24 @@
 #include <l298n.h>
 
-L298N::L298N(int a, int b,int c){
+L298N::L298N(int a, int b,int c,int d){
     this->enablePin = a;
     this->in1 = b;
     this->in2 = c;
     int enable_pins[3] = {a,b,c};
     for(int pin = 0; pin<3; pin++){
         pinMode(enable_pins[pin],OUTPUT);
-    }    
+    }
     // This function needs to be re-done
-    setSpeed(NULL);
+
 };
 
 float L298N::setSpeed(float n){
     if(n == NULL){
-        this->motorSpeed = 255;       
+        this->motorSpeed = 255;
     }else{
         this->motorSpeed = map(n,0,100,0,255);
+        analogWrite(this->enablePin,this->motorSpeed);
     }
-    return motorSpeed;
 }
 
 float L298N::readSpeed(){
@@ -42,19 +42,19 @@ bool L298N::isOff(){
 }
 void L298N::on(){
     if(isOn() == false){
-        digitalWrite(this->enablePin,HIGH);         
+        digitalWrite(this->enablePin,HIGH);
     }else{
         // Do nothing
     }
 };
 void L298N::off(){
     if(isOn()){
-        digitalWrite(this->enablePin,LOW);        
+        digitalWrite(this->enablePin,LOW);
     }
 };
 void L298N::forward(){
     if(isOn()){
-        digitalWrite(this->in1, HIGH); 
+        digitalWrite(this->in1, HIGH);
         digitalWrite(this->in2, LOW);
     }else{
         // Turn on enable pin then move forward
@@ -65,8 +65,8 @@ void L298N::forward(){
 }
 void L298N::backward(){
     if(isOn()){
-        digitalWrite(this->in1, LOW); 
-        digitalWrite(this->in2, HIGH);        
+        digitalWrite(this->in1, LOW);
+        digitalWrite(this->in2, HIGH);
     }else{
         on();
         delay(100);
