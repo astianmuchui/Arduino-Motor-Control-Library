@@ -1,22 +1,22 @@
 ### L298N Motor Control Library
 
-#### Introduction 
+#### Introduction
 This is a small library for motor control using the L298N module. It makes it easier to control motors independently.
 
-# Usage 
-- Include the source file. 
+# Usage
+- Include the source file.
 
-```c++ 
+```c++
 #include <Arduino.h>
 #include <l298n.h>
 
 ```
-- Create the L298N Object for each motor 
+- Create the L298N Object for each motor
 ### Arguments for initialization
 
 ```c++
 // Instantiate object
-L298N MyMotor(int enablePin,int input1,int input2,int speed);
+L298N MyMotor(int enablePin,int input1,int input2,float speed);
 /*
  Speed is a value between 0-100
 */
@@ -29,7 +29,7 @@ L298N MyMotor(int enablePin,int input1,int input2,int speed);
 L298N rightMotor(19,14,5,50);
 L298N leftMotor(12,13,16,50);
 ```
-- Call methods 
+- Call methods
 
 
 ```c++
@@ -41,7 +41,7 @@ L298N rightMotor(19,14,5,50);
 L298N leftMotor(12,13,16,50);
 
 void setup() {
-  // Setup is not required. 
+  // Setup is not required.
  //Pinmode is already set
 }
 
