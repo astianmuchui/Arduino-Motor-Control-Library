@@ -1,6 +1,5 @@
 #include <l298n.h>
-
-L298N::L298N(int a, int b,int c,int d){
+    L298N::L298N(int a, int b,int c,float d){
     this->enablePin = a;
     this->in1 = b;
     this->in2 = c;
@@ -8,8 +7,7 @@ L298N::L298N(int a, int b,int c,int d){
     for(int pin = 0; pin<3; pin++){
         pinMode(enable_pins[pin],OUTPUT);
     }
-    // This function needs to be re-done
-
+    L298N::setSpeed(d);
 };
 
 float L298N::setSpeed(float n){
