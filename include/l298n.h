@@ -9,7 +9,9 @@ class L298N{
         int in2;
         int motorSpeed;
         int enablePin;
+
         L298N::L298N(int,int,int,float);
+        void attach(int);
         void on();
         void off();
         void forward();
