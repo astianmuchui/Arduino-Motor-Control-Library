@@ -16,18 +16,16 @@ This is a small library for motor control using the L298N module. It makes it ea
 
 ```c++
 // Instantiate object
-L298N MyMotor(int enablePin,int input1,int input2,float speed);
-/*
- Speed is a value between 0-100
-*/
+L298N MyMotor(uint8_t enablePin,uint8_t input1,uint8_t input2);
+
 ```
 
 ```c++
 #include <Arduino.h>
 #include <l298n.h>
 // The params have been discussed above
-L298N rightMotor(19,14,5,50);
-L298N leftMotor(12,13,16,50);
+L298N rightMotor(19,14,5);
+L298N leftMotor(12,13,16);
 ```
 - Call methods
 
@@ -37,8 +35,8 @@ L298N leftMotor(12,13,16,50);
 #include <l298n.h>
 
 // Create Object
-L298N rightMotor(19,14,5,50);
-L298N leftMotor(12,13,16,50);
+L298N rightMotor(19,14,5);
+L298N leftMotor(12,13,16);
 
 void setup() {
   // Setup is not required.
@@ -46,8 +44,9 @@ void setup() {
 }
 
 void loop() {
-    rightMotor.forward();
-    leftMotor.backward();
+  // Param -> speed
+    rightMotor.forward(50);
+    leftMotor.backward(50);
     delay(500);
     rightMotor.off();
     leftMotor.off();

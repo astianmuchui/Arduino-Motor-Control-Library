@@ -6,8 +6,8 @@
 class L298N{
     public:
         int enablePin;
-        int in1;
-        int in2;
+        uint8_t in1;
+        uint8_t in2;
         int motorSpeed;
     public:
         L298N(int a, int b,int c){
