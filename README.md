@@ -8,7 +8,7 @@ This is a small library for motor control  in arduino. It makes it easier to con
 
 ```c++
 #include <Arduino.h>
-#include <l298n.h>
+#include <Motor.h>
 
 ```
 - Create the L298N Object for each motor
@@ -16,7 +16,7 @@ This is a small library for motor control  in arduino. It makes it easier to con
 
 ```c++
 // Instantiate object
-L298N MyMotor(uint8_t enablePin,uint8_t input1,uint8_t input2);
+Motor MyMotor(uint8_t enablePin,uint8_t input1,uint8_t input2);
 
 ```
 
@@ -24,8 +24,8 @@ L298N MyMotor(uint8_t enablePin,uint8_t input1,uint8_t input2);
 #include <Arduino.h>
 #include <l298n.h>
 // The params have been discussed above
-L298N rightMotor(19,14,5);
-L298N leftMotor(12,13,16);
+Motor rightMotor(19,14,5);
+Motor leftMotor(12,13,16);
 ```
 - Call methods
 

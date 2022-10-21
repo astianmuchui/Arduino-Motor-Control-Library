@@ -2,19 +2,19 @@
     Motor control library
     BY: SEBASTIAN MUCHUI
 */
-#ifndef L298N_H
-#define L298N_H
+#ifndef MOTOR_H
+#define MOTOR_H
 #include <Arduino.h>
 
 
-class L298N{
+class Motor{
     public:
         int enablePin;
         uint8_t in1;
         uint8_t in2;
         int motorSpeed;
     public:
-        L298N(int a, int b,int c){
+        Motor(int a, int b,int c){
         this->enablePin = a;
         this->in1 = b;
         this->in2 = c;
@@ -65,7 +65,7 @@ class L298N{
     }
     };
     void forward(float speed){
-        L298N::setSpeed(speed);
+        Motor::setSpeed(speed);
     if(isOn()){
         digitalWrite(this->in1, HIGH);
         digitalWrite(this->in2, LOW);
@@ -77,7 +77,7 @@ class L298N{
     }
     }
     void backward(float speed){
-    L298N::setSpeed(speed);
+        Motor::setSpeed(speed);
     if(isOn()){
         digitalWrite(this->in1, LOW);
         digitalWrite(this->in2, HIGH);
