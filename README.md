@@ -22,7 +22,7 @@ Motor MyMotor(uint8_t enablePin,uint8_t input1,uint8_t input2);
 
 ```c++
 #include <Arduino.h>
-#include <l298n.h>
+#include <Motor.h>
 // The params have been discussed above
 Motor rightMotor(19,14,5);
 Motor leftMotor(12,13,16);
@@ -32,11 +32,11 @@ Motor leftMotor(12,13,16);
 
 ```c++
 #include <Arduino.h>
-#include <l298n.h>
+#include <Motor.h>
 
 // Create Object
-L298N rightMotor(19,14,5);
-L298N leftMotor(12,13,16);
+Motor rightMotor(19,14,5);
+Motor leftMotor(12,13,16);
 
 void setup() {
   // Setup is not required.
