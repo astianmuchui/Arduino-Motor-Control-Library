@@ -1,7 +1,7 @@
-### L298N Motor Control Library
+### Arduino Motor Control Library
 
 #### Introduction
-This is a small library for motor control using the L298N module. It makes it easier to control motors independently.
+This is a small library for motor control  in arduino. It makes it easier to control motors independently.
 
 # Usage
 - Include the source file.

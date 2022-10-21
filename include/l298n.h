@@ -1,3 +1,7 @@
+/*
+    Motor control library
+    BY: SEBASTIAN MUCHUI
+*/
 #ifndef L298N_H
 #define L298N_H
 #include <Arduino.h>
