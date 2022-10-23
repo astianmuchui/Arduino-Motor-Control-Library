@@ -1,8 +1,6 @@
 #include <Arduino.h>
 #include <Motor.h>
 
-// Motor 1
-// Use the included library
 Motor motor1(6,8,9);
 Motor motor2(7,10,11);
 void setup(){
