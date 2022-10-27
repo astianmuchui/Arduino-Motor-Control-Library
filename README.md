@@ -4,7 +4,7 @@
 This is a small library for motor control  in arduino. It makes it easier to control motors independently.
 
 # Usage
-- Include the source file.
+- Include the header file.
 
 ```c++
 #include <Arduino.h>
